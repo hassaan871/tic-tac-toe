@@ -1,0 +1,47 @@
+.square {
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    vertical-align: top;
+    border-radius: 10px;
+    font-size: x-large;
+}
+
+.board {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('./assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.status {
+    color: #EF7722;
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: 'Segoe UI';
+    margin-bottom: 10px;
+}
+
+.restartbtn {
+    margin-top: 10px;
+    width: 180px;
+    border-radius: 20px;
+    border-color: #EF7722;
+    background-color: #EF7722;
+    color: #EBEBEB;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.wins {
+    color: #EBEBEB;
+    font-size: large;
+    font-family: 'Segoe UI';
+    margin-bottom: 10px;
+}
