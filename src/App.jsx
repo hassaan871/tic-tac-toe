@@ -76,7 +76,7 @@ function Board() {
           <span style={{ color: win.X > win.O ? "darkgreen" : "red", fontWeight: "bolder" }}>{win.X} </span>
           {" | "}  
           <span style={{ color: !xIsNext ? "#FAA533" : "white", fontWeight: "bold" }}>{"O Wins: "}</span>
-          <span style={{ color: win.X < win.O ? "green" : "red", fontWeight: "bolder" }}>{win.O}</span>  
+          <span style={{ color: win.O > win.X ? "darkgreen" : "red", fontWeight: "bolder" }}>{win.O}</span>  
         </div>
         <div className="board-row">
           <Square value={squares[0]} onSquareClick={() => handleClick(0)}/>
