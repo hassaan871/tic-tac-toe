@@ -50,7 +50,9 @@ function Board() {
   }, [winner])
 
   const draw = squares.every(square => square !== null)
-  if (draw) status = "DRAW"
+  if (draw) {
+    setStatus("DRAW")
+  }
 
   function handleClick(i) {
     if (squares[i] || winner) {
