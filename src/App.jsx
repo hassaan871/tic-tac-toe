@@ -38,11 +38,11 @@ function Board() {
   const [win, setWin] = useState({"X": 0, "O": 0})
   const [xIsNext, setXIsNext] = useState(true)
   const [squares, setSquares] = useState(Array(9).fill(null))
+  const [status, setStatus] = useState("Playing")
 
-  let status;
   const winner = calculateWinner(squares)
   useEffect(() => {
-    status = `WINNER:  ${winner}`
+    setStatus(`WINNER:  ${winner}`)
     setWin((prev) => ({
       ...prev,
       [winner]: prev[winner]+1
@@ -70,7 +70,7 @@ function Board() {
   return(
     <>
       <div className="board">
-        <div className="status">{status ? status : "Playing"}</div>
+        <div className="status">{winner ? status : "Playing"}</div>
         <div className="wins">
           <span style={{ color: xIsNext ? "#FAA533" : "white", fontWeight: "bold" }}>{"X Wins: "}</span>
           <span style={{ color: win.X > win.O ? "darkgreen" : "red", fontWeight: "bolder" }}>{win.X} </span>
